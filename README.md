@@ -277,8 +277,6 @@ If you would like to submit a pull request, please make an effort to follow the 
 ---
 Thanks for checking this out.
 
-Created by:
-– Erik Rasmussen, [@erikras](https://twitter.com/erikras)
+Created & Maintened by:
+– Prakash U, [@prakash-u](https://github.com/prakash-u)
 
-Maintened by:
-– Kévin Berthommier, [@bertho-zero](https://github.com/bertho-zero)
