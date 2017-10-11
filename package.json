@@ -33,7 +33,7 @@
     "build-dlls": "webpack --colors --display-error-details --config webpack/vendor.config.js",
     "postinstall": "concurrently \"npm run build\" \"npm run build-dlls\"",
     "precommit": "lint-staged",
-    "prettier": "prettier-eslint --write --eslint-config-path .eslintrc './+(src)/**/*.js'",
+    "prettier": "prettier-eslint --write --eslint-config-path .eslintrc './+(src | api)/**/*.js'",
     "lint": "eslint -c .eslintrc src",
     "test": "bnr test",
     "lighthouse-report": "lighthouse http://localhost:8080 --view",
@@ -42,7 +42,7 @@
     "docker-prod": ". ./docker/run.prod.sh"
   },
   "lint-staged": {
-    "+(src)/**/*.js": [
+    "+(src | api)/**/*.js": [
       "prettier-eslint --write --eslint-config-path .eslintrc",
       "eslint -c .eslintrc",
       "git add"
@@ -55,7 +55,7 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "production",
         "PORT": 8080,
-        "APIPORT": "localhost",
+        "APIHOST": "localhost",
         "APIPORT": 3030
       }
     },
@@ -65,7 +65,7 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "development",
         "PORT": 3000,
-        "APIPORT": "localhost",
+        "APIHOST": "localhost",
         "APIPORT": 3030,
         "WEBPACK_DLLS": 1
       }
@@ -77,7 +77,7 @@
         "NODE_PATH": "./src",
         "NODE_ENV": "development",
         "PORT": 3000,
-        "APIPORT": "localhost",
+        "APIHOST": "localhost",
         "APIPORT": 3030,
         "WEBPACK_DLLS": 1
       }
@@ -220,6 +220,6 @@
     "webpack-isomorphic-tools": "^3.0.2"
   },
   "engines": {
-    "node": "5.6.0"
+    "node": "6.11.0"
   }
 }
