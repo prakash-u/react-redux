@@ -36,7 +36,7 @@ export default class Home extends Component {
             <p>
               <a
                 className={styles.github}
-                href="https://github.com/erikras/react-redux-universal-hot-example"
+                href="https://github.com/prakash-u/react-redux"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -45,7 +45,7 @@ export default class Home extends Component {
             </p>
             {online && (
               <GithubButton
-                user="erikras"
+                user="prakash-u"
                 repo="react-redux-universal-hot-example"
                 type="star"
                 width={160}
@@ -56,7 +56,7 @@ export default class Home extends Component {
             )}
             {online && (
               <GithubButton
-                user="erikras"
+                user="prakash-u"
                 repo="react-redux-universal-hot-example"
                 type="fork"
                 width={160}
@@ -69,7 +69,7 @@ export default class Home extends Component {
             <p className={styles.humility}>
               Created and maintained by{' '}
               <a href="https://twitter.com/erikras" target="_blank" rel="noopener noreferrer">
-                @erikras
+                @prakash-u
               </a>.
             </p>
           </div>
